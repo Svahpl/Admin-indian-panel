@@ -431,7 +431,7 @@ const OrdersList = () => {
                                                     {order.orderDate.toLocaleDateString()}
                                                 </div>
                                                 <div className="font-medium text-green-600">
-                                                    ${order.totalAmount?.toFixed(2) || '0.00'}
+                                                    ₹{order.totalAmount?.toFixed(2) || '0.00'}
                                                 </div>
                                             </div>
                                             <div className="flex justify-end">
@@ -455,7 +455,7 @@ const OrdersList = () => {
                                                 </span>
                                             </div>
                                             <div className="font-medium text-green-600">
-                                                ＄{order.totalAmount?.toFixed(2) || '0.00'}
+                                                ₹{order.totalAmount?.toFixed(2) || '0.00'}
                                             </div>
                                         </div>
                                     </div>
@@ -518,8 +518,7 @@ const OrdersList = () => {
                                         <div><span className="text-blue-600 font-medium">Order Date: </span>{selectedOrder.orderDate.toLocaleDateString()}</div>
                                         <div><span className="text-blue-600 font-medium">Payment Status: </span>{selectedOrder.paymentStatus || 'N/A'}</div>
                                         <div><span className="text-blue-600 font-medium">Expected Delivery: </span>{selectedOrder.expectedDelivery ? new Date(selectedOrder.expectedDelivery).toLocaleDateString() : 'N/A'}</div>
-                                        <div><span className="text-blue-600 font-medium">shipping method: </span>{selectedOrder.shippingMethod || 'N/A'}</div>
-                                        <div><span className="text-blue-600 font-medium">Total Amount: </span>＄{selectedOrder.totalAmount?.toFixed(2) || '0.00'}</div>
+                                        <div><span className="text-blue-600 font-medium">Total Amount: </span>₹{selectedOrder.totalAmount?.toFixed(2) || '0.00'}</div>
                                     </div>
                                 </div>
                             </div>
@@ -605,10 +604,10 @@ const OrdersList = () => {
                                                                             <span className="font-medium">Weight:</span> {item.weight || 1} Kg
                                                                         </div>
                                                                         <div>
-                                                                            <span className="font-medium">Price:</span> ＄{(item.price || item.product?.price || 0).toFixed(2)}
+                                                                            <span className="font-medium">Price:</span> ₹{(item.price || item.product?.price || 0).toFixed(2)}
                                                                         </div>
                                                                         <div>
-                                                                            <span className="font-medium">Total:</span> ＄{((item.price || item.product?.price || 0) * (item.quantity || 1)).toFixed(2)}
+                                                                            <span className="font-medium">Total:</span> ₹{((item.price || item.product?.price || 0) * (item.quantity || 1)).toFixed(2)}
                                                                         </div>
                                                                         {(item.product?.description || item.description) && (
                                                                             <div className="mt-2">
@@ -623,7 +622,7 @@ const OrdersList = () => {
                                                                 </div>
                                                                 <div className="text-right">
                                                                     <div className="font-semibold text-green-600">
-                                                                        ＄{((item.price || item.product?.price || 0) * (item.quantity || 1)).toFixed(2)}
+                                                                        ₹{((item.price || item.product?.price || 0) * (item.quantity || 1)).toFixed(2)}
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -719,7 +718,7 @@ const OrdersList = () => {
                                         </div>
                                         <div className="text-right">
                                             <div className="text-2xl font-bold text-green-700">
-                                                ＄{selectedOrder.totalAmount?.toFixed(2) || '0.00'}
+                                                ₹{selectedOrder.totalAmount?.toFixed(2) || '0.00'}
                                             </div>
                                             <p className="text-sm text-green-600">
                                                 {selectedOrder.paymentStatus === 'Paid' ? 'Paid' : 'Payment Pending'}
