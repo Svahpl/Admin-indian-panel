@@ -283,7 +283,7 @@ const AddItemsPage = () => {
                 {/* Price */}
                 <div className="lg:col-span-1">
                   <label className="block text-sm font-medium text-green-700 mb-2">
-                    Price ($) *
+                    Price (₹) *
                   </label>
                   <input
                     type="number"

@@ -621,7 +621,7 @@ const ProductManagementPage = () => {
                         {product.title}
                       </h2>
                       <div className="text-base sm:text-lg font-bold text-green-600 ml-2 flex-shrink-0">
-                        ${product.price?.toFixed(2) || '0.00'}
+                        ₹{product.price?.toFixed(2) || '0.00'}
                       </div>
                     </div>
 
@@ -757,7 +757,7 @@ const ProductManagementPage = () => {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
-                        💰 Price ($) *
+                        💰 Price (₹) *
                       </label>
                       <input
                         type="number"
