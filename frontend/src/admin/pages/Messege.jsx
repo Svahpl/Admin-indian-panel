@@ -25,7 +25,7 @@ const SalesDashboard = () => {
             // Get token from localStorage
             const token = typeof window !== 'undefined' ? window.localStorage?.getItem('token') || '' : '';
 
-            const response = await fetch('${import.meta.env.VITE_BACKEND_URL}/api/sale/getsale', {
+            const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/sale/getsale`, {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`,
