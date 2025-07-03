@@ -11,7 +11,7 @@ const DashboardContent = ({ isOpen }) => {  const stats = [
 
   return (
     <div className="p-6">
-      <h1 className="text-2xl font-bold mb-6">India Dashboard </h1>
+      <h1 className="text-2xl font-bold text-green-700 mb-6">India Dashboard </h1>
       <RecentOrders />
     </div>
   );
